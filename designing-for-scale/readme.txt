@@ -9,6 +9,11 @@
         time-based data  例如微博啊，日志啥的
         user-based data 还可以从用户角度分割的
 
+基本要求：
+    shard 主分片
+    replicas 从分片
+    node 节点，一个node就是一台物理计算机理论上可以有多个shard多个replcas，具体中或者说实践中可能不推荐多放
+
 Elasticsearch is used by some companies to index and search petabytes of data every day, but most of us start out with something a little more humble in size. Even if we aspire to be the next Facebook, it is unlikely that our bank balance matches our aspirations. We need to build for what we have today, but in a way that will allow us to scale out flexibly and rapidly.
 
 Elasticsearch is built to scale. It will run very happily on your laptop or in a cluster containing hundreds of nodes, and the experience is almost identical. Growing from a small cluster to a large cluster is almost entirely automatic and painless. Growing from a large cluster to a very large cluster requires a bit more planning and design, but it is still relatively painless.
